@@ -1,4 +1,4 @@
-<% project_name = 'rails-api-template' %>
+<% project_name = 'haiku_backend' %>
 
 default: &default
   adapter: postgresql
