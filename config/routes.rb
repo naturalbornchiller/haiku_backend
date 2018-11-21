@@ -1,7 +1,8 @@
 # frozen_string_literal: true
 
 Rails.application.routes.draw do
-  resources :haiku, except %i[new edit]
+  resources :favorites
+  resources :haiku, except: %i[new edit]
   # RESTful routes
   # Custom routes
   post '/sign-up' => 'users#signup'

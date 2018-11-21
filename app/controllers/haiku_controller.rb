@@ -1,4 +1,4 @@
-class HaikuController < ApplicationController
+class HaikuController < OpenReadController
   before_action :set_haiku, only: [:show, :update, :destroy]
 
   # GET /haiku
@@ -15,7 +15,7 @@ class HaikuController < ApplicationController
 
   # POST /haiku
   def create
-    @haiku = Haiku.new(haiku_params)
+    @haiku = current_user.haiku.build(haiku_params)
 
     if @haiku.save
       render json: @haiku, status: :created, location: @haiku
@@ -41,7 +41,7 @@ class HaikuController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_haiku
-      @haiku = Haiku.find(params[:id])
+      @haiku = current_user.haiku.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.
