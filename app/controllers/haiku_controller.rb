@@ -1,19 +1,19 @@
-class HaikusController < ApplicationController
+class HaikuController < ApplicationController
   before_action :set_haiku, only: [:show, :update, :destroy]
 
-  # GET /haikus
+  # GET /haiku
   def index
-    @haikus = Haiku.all
+    @haiku = Haiku.all
 
-    render json: @haikus
+    render json: @haiku
   end
 
-  # GET /haikus/1
+  # GET /haiku/1
   def show
     render json: @haiku
   end
 
-  # POST /haikus
+  # POST /haiku
   def create
     @haiku = Haiku.new(haiku_params)
 
@@ -24,7 +24,7 @@ class HaikusController < ApplicationController
     end
   end
 
-  # PATCH/PUT /haikus/1
+  # PATCH/PUT /haiku/1
   def update
     if @haiku.update(haiku_params)
       render json: @haiku
@@ -33,7 +33,7 @@ class HaikusController < ApplicationController
     end
   end
 
-  # DELETE /haikus/1
+  # DELETE /haiku/1
   def destroy
     @haiku.destroy
   end
