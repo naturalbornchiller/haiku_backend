@@ -16,7 +16,9 @@ class HaikuController < OpenReadController
   # POST /haiku
   def create
     @haiku = current_user.haiku.build(haiku_params)
-
+    # @haiku.user_id = current_user.id
+    require 'pry'
+    binding.pry
     if @haiku.save
       render json: @haiku, status: :created, location: @haiku
     else

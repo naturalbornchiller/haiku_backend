@@ -1,6 +1,6 @@
 #!/bin/bash
 
-curl "http://localhost:4741/haikus" \
+curl "http://localhost:4741/haiku" \
   --include \
   --request POST \
   --header "Content-Type: application/json" \
