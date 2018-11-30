@@ -5,6 +5,5 @@ class User < ApplicationRecord
   # a user creates many haiku
   has_many :haiku, dependent: :destroy
   # a user favorites many haiku written by other users
-  # has_many :favorites, dependent: :destroy
-  # has_many :haiku, through: :favorites
+  has_many :favorites, dependent: :destroy
 end
