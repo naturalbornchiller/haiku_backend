@@ -1,19 +1,17 @@
 
-ADD TO HTML => 
+# What is Kigo?
+This is an app that allows users to publish and read haiku! This repo hosts the back end. If you want to checkout the front end, click on this link: https://github.com/naturalbornchiller/haiku_client
 
-Haiku are brief, imagistic poems traditionally depicting—or at least alluding—to nature. Their lifecycle is tripartite within the reader - language --> image --> feeling - digested in unhurried succession. It is difficult to ascertain what elements (and doses of each) are necessary to produce powerful haiku, but there are a number of things that should be kept in mind. A haiku, by nature, should be a distillation of an experience; it is a mood and a moment in time. It should reflect a fresh way of seeing, should be childlike, unselfconscious. It should deal strictly in the immediate; any references to setting, mood, or metaphor must be smuggled in. References to interpretation of any kind should be omitted entirely. Lastly, and perhaps most importantly, the haiku's language should be resonant, natural, succinct. The poet pares away that which is supernumerary; what is left is haiku.
+# Development Process
+For project 2, I placed immense primacy on form and "feel", as opposed to function. For the first day I worked on the rails api. After that though I spent the whole week working on html, css, jquery -- the interplay of each. This is my first time focusing on UX/UI, and I found it at once refreshing and maddening. There were so many tiny things—transitions, positioning, transformations, timing—that derailed me from creating 
+a working MVP, and I wish I could have used my time better.
 
-Kigo (季語 "season word") is a word or phrase meant to evoke the season that a poem is set in. E.g., cherry blossoms are a common spring kigo in japanese poetry, whereas the moon is strongly associated with autumn.
+# Future Goals
+I want to make the 'poems' page look extremely crisp; allow searching by title and author; create a timeline of ones own poems to view; allow for password change; restrict poem entry to haiku format; allow haiku to be favorited; for favorites to be retrievable; for haiku drafts to be stored; for haiku to be filtered by popularity. I'm mostly just spitballing here... but I really do want all those things.
 
-For haiku-writing guide read: https://www.thehaikufoundation.org/edwall/higginson_guidelines_for_writing_haiku.pdf 
+## Technologies Used
+- rails
+- ruby
 
-Things to avoid when writing haiku:
-- Philosophical statements
-- Anthropomorphism
-- Personification
-- Direct metaphor
-- Description
-- Explanation
-- Wordiness
-- Opinion
-- Simile
+## Link to ERD
+./erd.pdf
