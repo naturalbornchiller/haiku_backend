@@ -3,8 +3,7 @@ class HaikuController < OpenReadController
 
   # GET /haiku
   def index
-    @haiku = Haiku.all
-
+    @haiku = Haiku.order('title')
     render json: @haiku
   end
 
@@ -13,12 +12,21 @@ class HaikuController < OpenReadController
     render json: @haiku
   end
 
+  # GET /random
+  def random
+    @haiku = Haiku.order("RANDOM()").first
+    render json: @haiku
+  end
+
+  # GET /my-haiku - NOT YET ROUTED
+  def myhaiku
+    @haiku = current_user.haiku.order("created_at DESC")
+    render json: @haiku
+  end
+
   # POST /haiku
   def create
     @haiku = current_user.haiku.build(haiku_params)
-    # @haiku.user_id = current_user.id
-    require 'pry'
-    binding.pry
     if @haiku.save
       render json: @haiku, status: :created, location: @haiku
     else
